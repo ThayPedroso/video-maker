@@ -1,0 +1,25 @@
+{
+  "name": "video-maker",
+  "version": "1.0.0",
+  "description": "Programa para criar e fazer upload de vídeos automaticamente",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ThayPedroso/video-maker.git"
+  },
+  "keywords": [
+    "videomaker"
+  ],
+  "author": "Thayla Pedroso",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ThayPedroso/video-maker/issues"
+  },
+  "homepage": "https://github.com/ThayPedroso/video-maker#readme",
+  "dependencies": {
+    "readline-sync": "^1.4.9"
+  }
+}
