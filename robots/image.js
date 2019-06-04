@@ -5,6 +5,25 @@ const state = require('./state.js')
 
 const googleSearchCredentials = require('../credentials/google-search.json')
 
+/* Para teste da pesquisa
+async function robot(){
+    const content = state.load()
+
+    const response = await customSearch.cse.list({
+        auth: googleSearchCredentials.apiKey,
+        cx: googleSearchCredentials.searchEngineId,
+        q: 'Michael Jackson',
+        searchType: 'image',
+        imgSize: 'huge',
+        num: 2
+    })    
+    console.dir(response, { depth:null })
+    process.exit(0)
+
+}
+module.exports = robot
+*/
+
 async function robot(){
     const content = state.load()
 
@@ -22,9 +41,9 @@ async function robot(){
         }
     }
 
-    /*const imagesArray = await fetchGoogleAndReturnImagesLinks('Michael Jackson')
+    const imagesArray = await fetchGoogleAndReturnImagesLinks('Michael Jackson')
     console.dir(imagesArray, { depth:null })
-    process.exit(0)*/
+    process.exit(0)
 
     async function fetchGoogleAndReturnImagesLinks(query){
         const response = await customSearch.cse.list({
@@ -39,7 +58,6 @@ async function robot(){
         const imagesUrl = response.data.items.map((item) => {
             return item.link
         })
-
         return imagesUrl
     }
 
@@ -73,6 +91,8 @@ async function robot(){
             dest: `./content/${fileName}`
         })
     }
+    
 }
 
 module.exports = robot
+

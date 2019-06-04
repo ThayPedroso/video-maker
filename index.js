@@ -6,9 +6,9 @@ const robots = {
 }
 
 async function start(){
-
-    robots.input()
-    await robots.text()
+// Depois da primeira iteração, pode desabilitar as duas linhas abaixo para evitar passar pelo watson e outros
+//    robots.input()
+//    await robots.text()
     await robots.image()
     //console.log(JSON.stringify(content, null, 4))
     const content = robots.state.load()
